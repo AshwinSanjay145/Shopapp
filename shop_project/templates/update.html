@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+Update Product
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="heading_container heading_center">
+              <h4> Update</h4>
+       </div>
+        <div class="row d-flex justify-content-center">
+
+        <div class=" col-sm-3 col-md-4">
+          <div class="box col-md-12">
+            <form method="POST">
+              {% csrf_token %}
+              {{form.as_p}}
+                <div class="text-center">
+                  <input class="btn btn-danger" type="submit" value="Yes"/>
+              </form>
+
+          </div>
+        </div>
+
+        </div>
+    </div>
+
+{% endblock %}
